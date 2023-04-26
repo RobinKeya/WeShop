@@ -7,11 +7,12 @@ import androidx.lifecycle.viewModelScope
 import com.example.weshop.data.WeShopRepository
 import com.example.weshop.data.di.MainDispatcher
 import com.example.weshop.data.remote.Product
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-
+@HiltViewModel
 class ProductDetailsViewModel @Inject constructor(
     @MainDispatcher private val dispatcher: CoroutineDispatcher,
     private val weShopRepository: WeShopRepository,
